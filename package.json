@@ -1,0 +1,61 @@
+{
+  "name": "@nsoft/seven-sdk",
+  "version": "1.0.29",
+  "description": "The official Seven SDK for JavaScript",
+  "main": "dist/index.js",
+  "homepage": "https://github.com/nsftx",
+  "scripts": {
+    "lint": "eslint --ext .ts src",
+    "test": "npm run lint && jest src",
+    "type-check": "tsc --noEmit",
+    "type-check:watch": "npm run type-check -- --watch",
+    "build": "npm run build:types && npm run build:js",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "babel src --out-dir dist --extensions \".ts,.tsx\" --source-maps inline"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nsftx/seven-sdk-js.git"
+  },
+  "keywords": [
+    "seven",
+    "nsoft",
+    "sdk"
+  ],
+  "author": "Jadranko Dragoje <dragoje.jadranko@nsoft.com>",
+  "contributors": [
+    "Jadranko Dragoje <dragoje.jadranko@nsoft.com>"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nsftx/seven-sdk-js/issues"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.161",
+    "axios": "^0.19.2",
+    "lodash": "^4.17.20",
+    "qs": "^6.9.4"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.11.6",
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-numeric-separator": "^7.10.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.11.0",
+    "@babel/plugin-transform-runtime": "^7.11.5",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-typescript": "^7.10.4",
+    "@babel/runtime": "^7.11.2",
+    "@types/jest": "^24.9.1",
+    "@types/node": "^12.12.62",
+    "@types/qs": "^6.9.5",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-plugin-import": "^2.22.1",
+    "jest": "^24.9.0",
+    "typescript": "^3.9.7"
+  }
+}
